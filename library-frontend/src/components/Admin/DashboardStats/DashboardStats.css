@@ -1,0 +1,74 @@
+.dashboard-stats {
+  padding: 30px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-stats h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.charts-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.chart-box {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.chart-box h4 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.counters-table {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.counters-table h4 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.counters-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.counters-table th,
+.counters-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #eee;
+  font-size: 16px;
+}
+
+.counters-table th {
+  background-color: #009688;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.counters-table th:hover {
+  background-color: #00796b;
+}
+
+.counters-table td:hover {
+  background-color: #e0f2f1;
+}

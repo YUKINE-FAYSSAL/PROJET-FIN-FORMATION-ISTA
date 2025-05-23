@@ -1,0 +1,117 @@
+.confirm-reservation-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+  }
+  
+  .reservation-card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .reservation-header {
+    margin-bottom: 30px;
+  }
+  
+  .reservation-header h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .reservation-header .subtitle {
+    color: #7f8c8d;
+    font-size: 1rem;
+  }
+  
+  .reservation-details {
+    margin: 30px 0;
+    text-align: left;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .detail-item:last-child {
+    border-bottom: none;
+  }
+  
+  .detail-label {
+    color: #7f8c8d;
+    font-weight: 500;
+  }
+  
+  .detail-value {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  
+  .confirm-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  }
+  
+  .cancel-btn {
+    background-color: white;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  @media (max-width: 768px) {
+    .reservation-card {
+      margin: 20px;
+      padding: 25px;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .confirm-btn, .cancel-btn {
+      width: 100%;
+    }
+  } 

@@ -1,0 +1,17 @@
+.update-avatar-container {
+  max-width: 500px;
+  background-color: #fff;
+  padding: 30px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.update-avatar-form input {
+  margin-top: 10px;
+}
+
+.update-avatar-form button {
+  margin-top: 15px;
+}

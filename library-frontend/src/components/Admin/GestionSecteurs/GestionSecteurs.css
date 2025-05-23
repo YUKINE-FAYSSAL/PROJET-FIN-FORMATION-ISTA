@@ -1,0 +1,80 @@
+  .gestion-secteurs-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .gestion-secteurs-container h2 {
+    text-align: center;
+    color: #1e1b24;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+  }
+
+  .section h4 {
+    color: #4f46e5;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .section h5 {
+    margin-top: 20px;
+    color: #6b21a8;
+    font-weight: bold;
+  }
+
+  .form-inline {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .form-inline input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 160px;
+  }
+
+  .form-inline button {
+    padding: 10px 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .secteur-list,
+  .soussecteur-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .secteur-list li,
+  .soussecteur-list li {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .secteur-list li:hover,
+  .soussecteur-list li:hover {
+    background-color: #f3e8ff;
+    border-color: #9333ea;
+  }

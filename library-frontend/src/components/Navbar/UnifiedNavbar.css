@@ -1,0 +1,305 @@
+body {
+  padding-top: 60px; /* أو حسب ارتفاع الـ navbar */
+}
+
+  
+.main-navbar {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+  padding: 0.8rem 2rem !important; /* Remets la taille souhaitée */
+  z-index: 1050;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  min-height: 79px !important; /* taille souhaitée */
+}
+
+
+.navbar-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+    font-size: 1rem !important;
+  padding: 0.5rem 0 !important;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #38bdf8;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #38bdf8;
+  border-radius: 2px;
+}
+
+/* === NOTIF Modern === */
+.nav-notif {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.nav-notif:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+}
+
+.bell-icon {
+  font-size: 1.4rem;
+  color: white;
+  transition: 0.3s;
+}
+.bell-icon:hover {
+  color: #38bdf8;
+  transform: scale(1.1);
+}
+.notif-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #e74c3c;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 2px solid #1f2937;
+}
+
+/* === USER Modern === */
+.user-profile {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+}
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+}
+
+.avatar-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.user-profile:hover .avatar-img {
+  border-color: #38bdf8;
+}
+.user-profile span {
+  color: white;
+  font-weight: 500;
+}
+
+/* === DROPDOWN MENU === */
+.dropdown-menu {
+  font-size: 0.875rem;
+  min-width: 220px;
+  background: #1f2937 !important; /* غامق */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  color: white;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 0.6rem 1rem;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+.dropdown-menu .dropdown-header {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dropdown-item.text-danger {
+  color: #e74c3c;
+}
+.dropdown-item.text-danger:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #ff6b6b;
+}
+.dropdown-menu .dropdown-item i {
+  color: #38bdf8;
+}
+
+/* === LOGIN BUTTON === */
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(to right, #1e40af, #2563eb);
+  color: white !important;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.3);
+}
+
+.login-btn i {
+  color: white;
+  font-size: 1rem;
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #1e3a8a, #1d4ed8);
+  transform: translateY(-2px);
+}
+
+.btn-login:hover {
+  background: #38bdf8;
+  color: #111827;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+/* === TOGGLER === */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 991.98px) {
+  .d-lg-none {
+    display: flex !important;
+  }
+  .d-lg-flex {
+    display: none !important;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .mobile-only {
+    display: flex !important;
+    gap: 1rem;
+    margin-left: auto;
+  }
+  .dropdown-menu {
+    margin-top: 0.5rem;
+  }
+  .collapse.show {
+    background: #1f2937;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .navbar-nav.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .navbar-nav.mobile-menu .nav-item {
+    width: 100%;
+  }
+  .navbar-nav.mobile-menu .nav-link {
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+  }
+  .navbar-nav.mobile-menu .nav-link:hover,
+  .navbar-nav.mobile-menu .nav-link.active {
+    background-color: rgba(56, 189, 248, 0.1);
+  }
+  .mobile-auth {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+}
+.dropdown-toggle {
+  background-color: transparent !important;
+}
+.login-btn {
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  text-decoration: none;
+  
+}
+.login-btn:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+  border-color: #38bdf8;
+}
+.login-btn i {
+  color: #38bdf8;
+}
+/* ✅ تصغير اللوجو فقط في small device */
+@media (max-width: 767.98px) {
+  .mobile-logo {
+    height: 24px !important;
+  }
+
+  .main-navbar {
+    padding: 0.4rem 1rem !important;
+  }
+
+  .user-profile {
+    padding: 4px 8px;
+    gap: 6px;
+  }
+
+  .avatar-img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .nav-notif {
+    padding: 6px !important;
+    font-size: 1rem !important;
+  }
+
+  .notif-badge {
+    font-size: 0.55rem !important;
+    padding: 1px 4px !important;
+  }
+}
+

@@ -1,0 +1,9 @@
+body {
+  padding-top: 80px; /* نفس ارتفاع Navbar */
+  box-sizing: border-box;
+}
+
+/* الصفحات لي ما فيهاش navbar ما يتأثروش */
+.login-page, .no-navbar {
+  padding-top: 0 !important;
+}

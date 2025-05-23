@@ -1,0 +1,259 @@
+.mesreservations-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f3f4f6;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mesreservations-container {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* === Title === */
+.mesreservations-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1e1b24;
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.mesreservations-container h2::before {
+  content: '📚';
+  font-size: 2rem;
+}
+
+/* === Mini Navigation === */
+.mini-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* === Buttons === */
+.mr-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6b21a8, #a855f7);
+  box-shadow: 0 4px 8px rgba(168, 85, 247, 0.3);
+  transition: all 0.2s ease;
+}
+
+.mr-btn:hover {
+  background: linear-gradient(135deg, #581c87, #9333ea);
+  transform: translateY(-2px);
+}
+
+.mr-btn.active {
+  background: linear-gradient(135deg, #4c1d95, #7e22ce);
+}
+
+.mr-btn-outline {
+  background: transparent;
+  color: #9333ea;
+  border: 2px solid #9333ea;
+}
+
+.mr-btn-outline:hover {
+  background-color: #f3e8ff;
+}
+
+/* === Table === */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.mr-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mr-table thead tr {
+  background-color: #6b21a8;
+  color: white;
+}
+
+.mr-table th,
+.mr-table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.mr-table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* === Badges === */
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.reserved {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-badge.completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* === Download Button === */
+.mr-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #6b21a8, #a855f7);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mr-download-btn:hover {
+  background: linear-gradient(135deg, #581c87, #9333ea);
+  transform: translateY(-1px);
+}
+
+.mr-download-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* === States === */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #6b7280;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #a855f7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .mesreservations-container {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
+
+  .mr-table thead {
+    display: none;
+  }
+
+  .mr-table tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+  }
+
+  .mr-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .mr-table td:last-child {
+    border-bottom: none;
+  }
+
+  .mr-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #9333ea;
+    margin-right: 1rem;
+  }
+
+  .mr-download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* === Footer === */
+footer {
+  background-color: #1e1b24;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+.catalogue-page {
+  padding-top: 80px;
+}

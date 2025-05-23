@@ -1,0 +1,104 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 70px;
+  background-color: #1c2230;
+  padding: 20px 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1000;
+}
+
+/* ===== ICONS ONLY (DEFAULT) ===== */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  position: relative;
+  color: white;
+}
+
+.sidebar li.active {
+  background-color: #2f4bff;
+  box-shadow: 0 0 8px rgba(47, 75, 255, 0.6);
+}
+
+.sidebar li:hover {
+  background-color: #34495e;
+  cursor: pointer;
+}
+
+/* LABEL (Hidden by default) */
+.label {
+  display: none;
+}
+
+/* ===== EXPAND ON HOVER ONLY FOR DESKTOP ===== */
+@media (min-width: 769px) {
+  .sidebar:hover {
+    width: 220px;
+    align-items: flex-start;
+  }
+
+  .sidebar:hover li {
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
+
+  .sidebar:hover .label {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .sidebar:hover h2 {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-left: 12px;
+  }
+}
+
+/* ===== TITLE LOGO HIDDEN INITIALLY ===== */
+.sidebar h2 {
+  display: none;
+  font-size: 20px;
+  color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* ===== HIDE TOGGLE COMPLETELY ===== */
+.mobile-menu-toggle {
+  display: none;
+}
