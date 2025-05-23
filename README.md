@@ -23,11 +23,7 @@ PROJET-FIN-FORMATION-ISTA/
 │
 └── ... (other backend & frontend folders/files)
 
-yaml
-Copy
-Edit
 
----
 
 ## 🚀 Quick Start
 
@@ -36,16 +32,10 @@ Edit
 git clone https://github.com/YUKINE-FAYSSAL/PROJET-FIN-FORMATION-ISTA.git
 cd PROJET-FIN-DE-FORMATION-ISTA
 2. Set Up Environment Variables
-bash
-Copy
-Edit
 cp .env.example .env
 Edit the .env file to configure your Flask, MySQL, and other service credentials as needed.
 
 3. Build and Run All Services
-bash
-Copy
-Edit
 docker-compose up --build
 Flask backend: http://localhost:5000
 
@@ -57,17 +47,10 @@ Kafka & Zookeeper: running as services (see docker-compose.yml)
 
 ⚙️ Database Migration
 To apply database migrations (inside backend container):
-
-bash
-Copy
-Edit
 docker-compose exec backend flask db upgrade
 If your backend service has a different name, replace backend accordingly.
 
 🌐 Frontend Development (React)
-bash
-Copy
-Edit
 cd library-frontend
 npm install
 npm start
@@ -95,17 +78,10 @@ For real-time features, ensure Kafka and Zookeeper are running via Docker Compos
 
 🛠️ Developer Scripts
 Backend:
-
-bash
-Copy
-Edit
 cd backend
 flask run
 Frontend:
 
-bash
-Copy
-Edit
 cd library-frontend
 npm install
 npm start
